@@ -1,4 +1,4 @@
-package pt.ist.fenixframework.gradle.task
+package org.fenixedu.gradle.task
 
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction

@@ -1,9 +1,9 @@
-package pt.ist.fenixframework.gradle
+package org.fenixedu.gradle
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import pt.ist.fenixframework.gradle.task.AtomicTask
-import pt.ist.fenixframework.gradle.task.CodeGeneratorTask
+import org.fenixedu.gradle.task.AtomicTask
+import org.fenixedu.gradle.task.CodeGeneratorTask
 
 /**
  *

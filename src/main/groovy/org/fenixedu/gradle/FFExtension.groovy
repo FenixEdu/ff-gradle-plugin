@@ -1,4 +1,4 @@
-package pt.ist.fenixframework.gradle
+package org.fenixedu.gradle
 
 /**
  * Fenix Framework Gradle Plugin configuration extension.
