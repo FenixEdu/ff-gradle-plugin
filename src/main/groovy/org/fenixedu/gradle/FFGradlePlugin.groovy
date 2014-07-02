@@ -28,16 +28,16 @@ class FFGradlePlugin implements Plugin<Project> {
      * Sets up the Code Generation tasks.
      */
     def setupCodeGeneration(Project project) {
-        project.task('dmlGenerator', type: CodeGeneratorTask) {
-            configuration = project.configurations.compile
-            dmlSources = project.file('src/main/dml')
-            sourceSet = project.sourceSets.main
-            codeGenerator = project.ff.codeGenerator
-        }
-        // Code Generation occurs before Java Compilation
-        project.tasks.compileJava.dependsOn('dmlGenerator')
-
         project.afterEvaluate {
+            project.task('dmlGenerator', type: CodeGeneratorTask) {
+                configuration = project.configurations.compile
+                dmlSources = project.file('src/main/dml')
+                sourceSet = project.sourceSets.main
+                codeGenerator = project.ff.codeGenerator
+            }
+            // Code Generation occurs before Java Compilation
+            project.tasks.compileJava.dependsOn('dmlGenerator')
+
             if (project.ff.enableTests) {
                 project.task('testDmlGenerator', type: CodeGeneratorTask) {
                     configuration = project.configurations.testCompile
