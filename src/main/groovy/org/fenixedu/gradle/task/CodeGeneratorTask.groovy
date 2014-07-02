@@ -31,6 +31,7 @@ class CodeGeneratorTask extends DefaultTask {
     @TaskAction
     def apply() {
         def mainSourcesDir = sourceSet.java.srcDirs.iterator().next()
+        mainSourcesDir.mkdirs()
 
         // Special class-loader is required to contain all the dependencies
         ClassLoader loader = new URLClassLoader(configuration.collect {
