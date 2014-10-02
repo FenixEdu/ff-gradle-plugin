@@ -14,18 +14,18 @@ apply plugin: 'java'
 apply plugin: 'ff'
 
 repositories {
-    maven { url "https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository" }
+    maven { url "https://repo.fenixedu.org/fenixedu-maven-repository" }
 }
 
 buildscript {
     repositories {
-        maven { url "https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository" }
+        maven { url "https://repo.fenixedu.org/fenixedu-maven-repository" }
     }
     dependencies { classpath "org.fenixedu:ff-gradle-plugin:1.0.0" }
 }
 
 dependencies {
-    compile "pt.ist:fenix-framework-core-api:2.5.0"
+    compile "pt.ist:fenix-framework-core-api:2.5.1"
 }
 ```
 
@@ -60,7 +60,7 @@ The plugin does not impose any version of the Fenix Framework runtime or depende
 ```groovy
 buildscript {
     repositories {
-        maven { url "https://fenix-ashes.ist.utl.pt/nexus/content/groups/fenix-ashes-maven-repository" }
+        maven { url "https://repo.fenixedu.org/fenixedu-maven-repository" }
     }
     dependencies {
         classpath "org.fenixedu:ff-gradle-plugin:1.0.0"
